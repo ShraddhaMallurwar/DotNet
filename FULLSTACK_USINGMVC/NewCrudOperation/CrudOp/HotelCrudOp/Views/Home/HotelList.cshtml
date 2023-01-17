@@ -1,0 +1,24 @@
+@using BOL;
+
+<h1>Hotel List</h1>
+<hr style="border: 3px solid darkBlue;">
+
+@{
+    List<Hotel> allhotels=ViewBag.Hotel;
+        
+   <table style="border: 2px solid black;">
+    <tr><th>Hotel ID</th><th>Hotel Name</th><th>Hotel City</th>
+    @foreach (Hotel item in allhotels)
+    {
+       <tr style="border: 2px solid black;">
+        <th>@item.HotelID</th>
+        <th>@item.Hotelname</th>
+        <th>@item.HotelCity</th>
+        <th><button class="btn btn-success">Edit</button></th>
+        <th><button class="btn btn-danger" type="submit"><a href="/Home/delete/@item.HotelID">Delete</a></button></th>
+       </tr>
+    }
+    </tr>
+   </table>    
+
+}

@@ -1,0 +1,10 @@
+@using BOL;
+@model Hotel;
+
+<form  method="post" action="/Home/Insert" >
+    Hotel ID: <input type="number" name="HotelID" id="HotelID" asp-for="HotelID"><br>
+    Hotel Name: <input type="text" name="Hotelname" id="Hotelname" asp-for="Hotelname"><br>
+    Hotel City: <input type="text" name="HotelCity" id="HotelCity" asp-for="HotelCity"><br>
+
+    <button type="submit" class="btn btn-primary" name="btn" id="btn">Add Product</button>
+</form>
